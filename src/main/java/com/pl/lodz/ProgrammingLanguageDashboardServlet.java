@@ -3,12 +3,14 @@ package com.pl.lodz;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+@WebServlet(name = "ProgrammingLanguageDashboardServlet", value = "/code", loadOnStartup = 1)
 public class ProgrammingLanguageDashboardServlet extends HttpServlet {
 
     private final static Logger logger = Logger.getLogger(ProgrammingLanguageDashboardServlet.class);
