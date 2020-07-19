@@ -17,6 +17,14 @@ public class ProgrammingLanguageDashboardServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
         writer.println("<html>");
+        writer.println("<!DOCTYPE html><html><head><title>code</title>");
+        writer.println("<style>");
+        writer.println("table {border-collapse: collapse;width: 60%; margin-left:20%; margin-right:20%;}");
+        writer.println("table, th, td {border: 1px solid black; text-align: left}");
+        writer.println("</style>");
+        writer.println("</head>");
+
+
         writer.println("<body>");
         writer.println("<table>");
         writer.println("<tr>");
