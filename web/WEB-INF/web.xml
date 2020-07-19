@@ -8,8 +8,24 @@
         <servlet-name>HelloServlet</servlet-name>
         <servlet-class>com.pl.lodz.HelloServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AboutMeServlet</servlet-name>
+        <servlet-class>com.pl.lodz.AboutMeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProgrammingServlet</servlet-name>
+        <servlet-class>com.pl.lodz.ProgrammingLanguageDashboardServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HelloServlet</servlet-name>
         <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AboutMeServlet</servlet-name>
+        <url-pattern>/me</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProgrammingServlet</servlet-name>
+        <url-pattern>/code</url-pattern>
     </servlet-mapping>
 </web-app>
