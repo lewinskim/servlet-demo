@@ -1,8 +1,6 @@
 package com.pl.lodz;
 
-import lombok.extern.slf4j.Slf4j;
 import org.apache.log4j.Logger;
-import org.apache.log4j.spi.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
