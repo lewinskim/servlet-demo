@@ -1,5 +1,7 @@
 package com.pl.lodz;
 
+import org.apache.log4j.Logger;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -8,6 +10,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class ProgrammingLanguageDashboardServlet extends HttpServlet {
+
+    private final static Logger logger = Logger.getLogger(ProgrammingLanguageDashboardServlet.class);
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
@@ -36,5 +41,10 @@ public class ProgrammingLanguageDashboardServlet extends HttpServlet {
 
         writer.println("</body>");
         writer.println("</html>");
+    }
+
+    @Override
+    public void init() throws ServletException {
+        logger.info("I should be initialized first");
     }
 }

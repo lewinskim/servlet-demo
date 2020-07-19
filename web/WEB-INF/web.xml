@@ -7,14 +7,17 @@
     <servlet>
         <servlet-name>HelloServlet</servlet-name>
         <servlet-class>com.pl.lodz.HelloServlet</servlet-class>
+        <load-on-startup>3</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>AboutMeServlet</servlet-name>
         <servlet-class>com.pl.lodz.AboutMeServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>ProgrammingServlet</servlet-name>
         <servlet-class>com.pl.lodz.ProgrammingLanguageDashboardServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>HelloServlet</servlet-name>
