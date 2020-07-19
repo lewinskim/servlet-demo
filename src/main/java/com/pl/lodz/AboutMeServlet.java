@@ -25,6 +25,7 @@ public class AboutMeServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
+        super.init();
         logger.info("I should be initialized after ProgDashboard");
     }
 }

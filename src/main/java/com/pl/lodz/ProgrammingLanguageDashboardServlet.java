@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "ProgrammingLanguageDashboardServlet", value = "/code", loadOnStartup = 1)
 public class ProgrammingLanguageDashboardServlet extends HttpServlet {
@@ -25,9 +27,8 @@ public class ProgrammingLanguageDashboardServlet extends HttpServlet {
         writer.println("table, th, td {border: 1px solid black; text-align: left}");
         writer.println("</style>");
         writer.println("</head>");
-
-
         writer.println("<body>");
+
         writer.println("<table>");
         writer.println("<tr>");
         writer.println("<th>Programming Language</th>");
@@ -35,23 +36,19 @@ public class ProgrammingLanguageDashboardServlet extends HttpServlet {
         writer.println("<th>Diff level</th>");
         writer.println("</tr>");
 
-        writer.println("<tr>");
-        writer.println("<td>Java</td>");
-        writer.println("<td>WEB, Desktop, Mobile</td>");
-        writer.println("<td>3/5</td>");
-        writer.println("</tr>");
-
-        writer.println("<tr>");
-        writer.println("<td>PHP</td>");
-        writer.println("<td>WEB</td>");
-        writer.println("<td>2/5</td>");
-        writer.println("</tr>");
-
+        List<Map<String, String>> languages = LanguageService.getLANGUAGES();
+        for (Map<String, String> languageParams : languages) {
+            writer.println("<tr>");
+            writer.println("<td>" + languageParams.get("languageContent") + "</td>");
+            writer.println("<td>" + languageParams.get("languageusingContent") + "</td>");
+            writer.println("<td>" + languageParams.get("radiocontext") + "</td>");
+            writer.println("</tr>");
+        }
         writer.println("</table>");
-
         writer.println("</body>");
         writer.println("</html>");
     }
+
 
     @Override
     public void init() throws ServletException {
