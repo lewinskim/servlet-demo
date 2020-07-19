@@ -22,18 +22,16 @@ public class ProgrammingLanguageDashboardServlet extends HttpServlet {
 
         writer.println("<tr>");
         writer.println("<td>Java</td>");
-        writer.println("<td>PHP</td>");
-        writer.println("</tr>");
-
-        writer.println("<tr>");
         writer.println("<td>WEB, Desktop, Mobile</td>");
-        writer.println("<td>WEB</td>");
+        writer.println("<td>3/5</td>");
         writer.println("</tr>");
 
         writer.println("<tr>");
-        writer.println("<td>3/5</td>");
+        writer.println("<td>PHP</td>");
+        writer.println("<td>WEB</td>");
         writer.println("<td>2/5</td>");
         writer.println("</tr>");
+
         writer.println("</table>");
 
         writer.println("</body>");
